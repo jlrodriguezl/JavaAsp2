@@ -1,0 +1,16 @@
+C:\Users\jlrodriguez\source\repos\VideotiendaWFApp\VideotiendaWFApp\bin\Debug\VideotiendaWFApp.exe.config
+C:\Users\jlrodriguez\source\repos\VideotiendaWFApp\VideotiendaWFApp\bin\Debug\VideotiendaWFApp.exe
+C:\Users\jlrodriguez\source\repos\VideotiendaWFApp\VideotiendaWFApp\bin\Debug\VideotiendaWFApp.pdb
+C:\Users\jlrodriguez\source\repos\VideotiendaWFApp\VideotiendaWFApp\bin\Debug\EntityFramework.dll
+C:\Users\jlrodriguez\source\repos\VideotiendaWFApp\VideotiendaWFApp\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\jlrodriguez\source\repos\VideotiendaWFApp\VideotiendaWFApp\bin\Debug\EntityFramework.xml
+C:\Users\jlrodriguez\source\repos\VideotiendaWFApp\VideotiendaWFApp\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\jlrodriguez\source\repos\VideotiendaWFApp\VideotiendaWFApp\obj\Debug\VideotiendaWFApp.csprojAssemblyReference.cache
+C:\Users\jlrodriguez\source\repos\VideotiendaWFApp\VideotiendaWFApp\obj\Debug\VideotiendaWFApp.Properties.Resources.resources
+C:\Users\jlrodriguez\source\repos\VideotiendaWFApp\VideotiendaWFApp\obj\Debug\VideotiendaWFApp.csproj.GenerateResource.cache
+C:\Users\jlrodriguez\source\repos\VideotiendaWFApp\VideotiendaWFApp\obj\Debug\VideotiendaWFApp.csproj.CoreCompileInputs.cache
+C:\Users\jlrodriguez\source\repos\VideotiendaWFApp\VideotiendaWFApp\obj\Debug\VideotiendaWFApp.csproj.CopyComplete
+C:\Users\jlrodriguez\source\repos\VideotiendaWFApp\VideotiendaWFApp\obj\Debug\VideotiendaWFApp.exe
+C:\Users\jlrodriguez\source\repos\VideotiendaWFApp\VideotiendaWFApp\obj\Debug\VideotiendaWFApp.pdb
+C:\Users\jlrodriguez\source\repos\VideotiendaWFApp\VideotiendaWFApp\obj\Debug\VideotiendaWFApp.Views.FrmDominios.resources
+C:\Users\jlrodriguez\source\repos\VideotiendaWFApp\VideotiendaWFApp\obj\Debug\VideotiendaWFApp.Views.FrmGestionarDominios.resources

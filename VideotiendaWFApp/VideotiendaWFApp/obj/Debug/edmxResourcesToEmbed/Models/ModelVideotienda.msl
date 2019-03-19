@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="videotiendaModelStoreContainer" CdmEntityContainer="videotiendaEntities">
+    <EntitySetMapping Name="DOMINIOS">
+      <EntityTypeMapping TypeName="videotiendaModel.DOMINIOS">
+        <MappingFragment StoreEntitySet="DOMINIOS">
+          <ScalarProperty Name="TIPO_DOMINIO" ColumnName="TIPO_DOMINIO" />
+          <ScalarProperty Name="ID_DOMINIO" ColumnName="ID_DOMINIO" />
+          <ScalarProperty Name="VLRDOMINIO" ColumnName="VLRDOMINIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
