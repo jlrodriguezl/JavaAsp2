@@ -5,7 +5,20 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="0de2dc01e2f44d9ebde3b5701014553c" Name="Diagram1">
-        <EntityTypeShape EntityType="videotiendaModel.DOMINIOS" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="videotiendaModel.ALQ_VIDEOJUEGOS" Width="1.5" PointX="5.25" PointY="3.75" />
+        <EntityTypeShape EntityType="videotiendaModel.ALQUILER" Width="1.5" PointX="3" PointY="8.5" />
+        <EntityTypeShape EntityType="videotiendaModel.CAT_VIDEOJUEGOS" Width="1.5" PointX="5.25" PointY="0.75" />
+        <EntityTypeShape EntityType="videotiendaModel.CATEGORIAS" Width="1.5" PointX="3" PointY="1.125" />
+        <EntityTypeShape EntityType="videotiendaModel.DOMINIOS" Width="1.5" PointX="5.75" PointY="7.125" />
+        <EntityTypeShape EntityType="videotiendaModel.PERSONAS" Width="1.5" PointX="0.75" PointY="8.375" />
+        <EntityTypeShape EntityType="videotiendaModel.PRODUCTORES" Width="1.5" PointX="0.75" PointY="4" />
+        <EntityTypeShape EntityType="videotiendaModel.VIDEOJUEGOS" Width="1.5" PointX="3" PointY="3.5" />
+        <AssociationConnector Association="videotiendaModel.FK__ALQ_VIDEO__ID_AL__6C190EBB" />
+        <AssociationConnector Association="videotiendaModel.FK__ALQ_VIDEO__NRO_R__6D0D32F4" />
+        <AssociationConnector Association="videotiendaModel.FK__ALQUILER__NRO_DO__628FA481" />
+        <AssociationConnector Association="videotiendaModel.FK__CAT_VIDEO__ID_CA__68487DD7" />
+        <AssociationConnector Association="videotiendaModel.FK__CAT_VIDEO__NRO_R__693CA210" />
+        <AssociationConnector Association="videotiendaModel.FK__VIDEOJUEG__ID_PR__656C112C" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

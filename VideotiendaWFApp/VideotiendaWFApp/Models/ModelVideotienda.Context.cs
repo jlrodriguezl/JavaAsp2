@@ -25,6 +25,13 @@ namespace VideotiendaWFApp.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<ALQ_VIDEOJUEGOS> ALQ_VIDEOJUEGOS { get; set; }
+        public virtual DbSet<ALQUILER> ALQUILER { get; set; }
+        public virtual DbSet<CAT_VIDEOJUEGOS> CAT_VIDEOJUEGOS { get; set; }
+        public virtual DbSet<CATEGORIAS> CATEGORIAS { get; set; }
         public virtual DbSet<DOMINIOS> DOMINIOS { get; set; }
+        public virtual DbSet<PERSONAS> PERSONAS { get; set; }
+        public virtual DbSet<PRODUCTORES> PRODUCTORES { get; set; }
+        public virtual DbSet<VIDEOJUEGOS> VIDEOJUEGOS { get; set; }
     }
 }
