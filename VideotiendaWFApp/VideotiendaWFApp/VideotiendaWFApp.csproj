@@ -114,6 +114,18 @@
     <Compile Include="Views\FrmGestionarDominios.Designer.cs">
       <DependentUpon>FrmGestionarDominios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\FrmGestionarProductores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmGestionarProductores.Designer.cs">
+      <DependentUpon>FrmGestionarProductores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmProductores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmProductores.Designer.cs">
+      <DependentUpon>FrmProductores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\FrmVideojuegos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +146,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FrmGestionarDominios.resx">
       <DependentUpon>FrmGestionarDominios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmGestionarProductores.resx">
+      <DependentUpon>FrmGestionarProductores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmProductores.resx">
+      <DependentUpon>FrmProductores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FrmVideojuegos.resx">
       <DependentUpon>FrmVideojuegos.cs</DependentUpon>

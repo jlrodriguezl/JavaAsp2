@@ -16,5 +16,10 @@ namespace VideotiendaWFApp.Views
         {
             InitializeComponent();
         }
+
+        private void FrmGestionarProductores_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
