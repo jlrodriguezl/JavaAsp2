@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using VideotiendaAPP.Models;  // carga la app con el modelo categoria
+using VideotiendaWFApp.Models;  // carga la app con el modelo categoria
 
 
 namespace VideotiendaAPP.Views
@@ -19,12 +19,11 @@ namespace VideotiendaAPP.Views
             InitializeComponent();
         }
 
-        private void FrmDominios_Load(object sender, EventArgs e)
+        private void FrmCategoria_Load(object sender, EventArgs e)
         {
             refrescarTabla(); // cargara lpos datos cuanfdo inicia
         }
-
-
+        
         #region Helper
 
         public void refrescarTabla()
@@ -104,28 +103,56 @@ namespace VideotiendaAPP.Views
         private void button4_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void FrmCategoria_Load(object sender, EventArgs e)
-        {
-
-        }
-
-
-   
+        }   
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-
+            Views.FrmGestionarCategorias frmGestionarCategorias = new Views.FrmGestionarCategorias(null);
+            frmGestionarCategorias.ShowDialog();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-
+            //obtener categorias que se selecciono en la tabla para editar
+            CATEGORIAS d = getselectedItem();
+            //hubo seleccion
+            if (d != null)
+            {
+                // INICIALIZAMOS FORMULARIO D E EDICION DE CATEGORIA
+                Views.FrmGestionarCategorias frmGestionarCategorias = new FrmGestionarCategorias
+                    (d.NOM_CATEGORIA);
+                //abrir formulario de edicion categorias 
+                frmGestionarCategorias.ShowDialog();
+                //refrescar la tabla  cuando regrese al formulario 
+                refrescarTabla();
+            }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            // Obtener la categoria que se va eliminar
+            CATEGORIAS d = this.getselectedItem();
+            //hubo seleccion
+            if(d !=null)
 
+            {
+                if(MessageBox.Show("Esta seguro que desea Eliminar este registro?",
+                    "Confirmacion",MessageBoxButtons.YesNo,MessageBoxIcon.Question,MessageBoxDefaultButton.Button1)
+                    == System.Windows.Forms.DialogResult.Yes)
+                {
+                    //Establecer conexion con la BD a traves de EF
+                    using (videotiendaEntities db = new videotiendaEntities())
+                    {
+                        //Buscar el dominio en la BD
+                        CATEGORIAS dEliminar = db.CATEGORIAS.Find(d.NOM_CATEGORIA);
+                        //ELIMINAR LA CATEGORIA EN LA BD 
+                        db.CATEGORIAS.Remove(dEliminar);
+                        //Confirmar cambios en la bd
+                        this.refrescarTabla();
+
+                    }
+
+                }
+            }
         }
     }
 }

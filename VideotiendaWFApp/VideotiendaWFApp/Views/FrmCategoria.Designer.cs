@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.gbxFiltro = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lblcategodia = new System.Windows.Forms.Label();
-            this.txtncategoria = new System.Windows.Forms.TextBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.txtncategoria = new System.Windows.Forms.TextBox();
+            this.lblcategodia = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.grdDatos = new System.Windows.Forms.DataGridView();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
@@ -58,34 +58,15 @@
             this.gbxFiltro.TabStop = false;
             this.gbxFiltro.Text = "Filtro de Busqueda";
             // 
-            // groupBox2
+            // btnLimpiar
             // 
-            this.groupBox2.Controls.Add(this.grdDatos);
-            this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox2.Location = new System.Drawing.Point(59, 140);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(938, 273);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Categorias";
-            // 
-            // lblcategodia
-            // 
-            this.lblcategodia.AutoSize = true;
-            this.lblcategodia.Location = new System.Drawing.Point(40, 26);
-            this.lblcategodia.Name = "lblcategodia";
-            this.lblcategodia.Size = new System.Drawing.Size(124, 15);
-            this.lblcategodia.TabIndex = 0;
-            this.lblcategodia.Text = "Nombre Categoria";
-            // 
-            // txtncategoria
-            // 
-            this.txtncategoria.Location = new System.Drawing.Point(219, 23);
-            this.txtncategoria.Name = "txtncategoria";
-            this.txtncategoria.Size = new System.Drawing.Size(200, 21);
-            this.txtncategoria.TabIndex = 1;
-            this.txtncategoria.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtncategoria.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.btnLimpiar.Location = new System.Drawing.Point(660, 20);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(100, 30);
+            this.btnLimpiar.TabIndex = 3;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnBuscar
             // 
@@ -97,15 +78,34 @@
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // btnLimpiar
+            // txtncategoria
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(660, 20);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(100, 30);
-            this.btnLimpiar.TabIndex = 3;
-            this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
-            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            this.txtncategoria.Location = new System.Drawing.Point(219, 23);
+            this.txtncategoria.Name = "txtncategoria";
+            this.txtncategoria.Size = new System.Drawing.Size(200, 21);
+            this.txtncategoria.TabIndex = 1;
+            this.txtncategoria.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtncategoria.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // lblcategodia
+            // 
+            this.lblcategodia.AutoSize = true;
+            this.lblcategodia.Location = new System.Drawing.Point(40, 26);
+            this.lblcategodia.Name = "lblcategodia";
+            this.lblcategodia.Size = new System.Drawing.Size(124, 15);
+            this.lblcategodia.TabIndex = 0;
+            this.lblcategodia.Text = "Nombre Categoria";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.grdDatos);
+            this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox2.Location = new System.Drawing.Point(59, 140);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(938, 273);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Categorias";
             // 
             // grdDatos
             // 
@@ -119,7 +119,7 @@
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(62, 445);
+            this.btnNuevo.Location = new System.Drawing.Point(133, 445);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(100, 30);
             this.btnNuevo.TabIndex = 2;
@@ -129,7 +129,7 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(296, 445);
+            this.btnEditar.Location = new System.Drawing.Point(278, 445);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(100, 30);
             this.btnEditar.TabIndex = 3;
@@ -139,7 +139,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(544, 445);
+            this.btnEliminar.Location = new System.Drawing.Point(431, 445);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(100, 30);
             this.btnEliminar.TabIndex = 4;
