@@ -31,6 +31,25 @@ namespace VideotiendaWFApp.Views
             }
         }
 
+        private PRODUCTORES getSelectedItem()
+        {
+            PRODUCTORES p = new PRODUCTORES();
+            try
+            {
+                p.ID_PROD =
+                    int.Parse(grDatos.Rows[grDatos.CurrentRow.Index].Cells[0].
+                    Value.ToString());
+                p.NOM_PROD =
+                    grDatos.Rows[grDatos.CurrentRow.Index].Cells[1].Value.ToString();
+
+                return p;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
 #endregion
 
         private void FrmProductores_Load(object sender, EventArgs e)
@@ -57,6 +76,30 @@ namespace VideotiendaWFApp.Views
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             this.txtNombre.Text = "";
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            Views.FrmGestionarProductores frmGestionarProductores = new
+                Views.FrmGestionarProductores(null,null);
+            frmGestionarProductores.ShowDialog();
+
+            refrescarTabla();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            PRODUCTORES p = getSelectedItem();
+
+            if(p != null)
+            {
+                Views.FrmGestionarProductores frmGestionarProductores = new Views.
+                    FrmGestionarProductores((p.ID_PROD).ToString(), p.NOM_PROD);
+
+                frmGestionarProductores.ShowDialog();
+
+                refrescarTabla();
+            }
         }
     }
 }
