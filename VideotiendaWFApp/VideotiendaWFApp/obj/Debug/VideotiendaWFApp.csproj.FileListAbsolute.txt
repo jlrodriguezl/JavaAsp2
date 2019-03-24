@@ -61,7 +61,6 @@ D:\JCortes\JavaAsp2\VideotiendaWFApp\VideotiendaWFApp\obj\Debug\VideotiendaWFApp
 D:\JCortes\JavaAsp2\VideotiendaWFApp\VideotiendaWFApp\obj\Debug\VideotiendaWFApp.Views.FrmGestionarDominios.resources
 D:\JCortes\JavaAsp2\VideotiendaWFApp\VideotiendaWFApp\obj\Debug\VideotiendaWFApp.Views.FrmGestionarProductores.resources
 D:\JCortes\JavaAsp2\VideotiendaWFApp\VideotiendaWFApp\obj\Debug\VideotiendaWFApp.Views.FrmProductores.resources
-D:\JCortes\JavaAsp2\VideotiendaWFApp\VideotiendaWFApp\obj\Debug\VideotiendaWFApp.Views.FrmVideojuegos.resources
 D:\JCortes\JavaAsp2\VideotiendaWFApp\VideotiendaWFApp\obj\Debug\VideotiendaWFApp.csproj.GenerateResource.cache
 D:\JCortes\JavaAsp2\VideotiendaWFApp\VideotiendaWFApp\obj\Debug\VideotiendaWFApp.csproj.CoreCompileInputs.cache
 D:\JCortes\JavaAsp2\VideotiendaWFApp\VideotiendaWFApp\obj\Debug\VideotiendaWFApp.csproj.CopyComplete

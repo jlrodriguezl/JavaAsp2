@@ -14,33 +14,38 @@ namespace VideotiendaWFApp.Views
     public partial class FrmGestionarProductores : Form
     {
         PRODUCTORES oProductores = null;
-        private string idProductor;
-        private string nomProductor;
+
+        private string idProductores;
+        
             
 
-        public FrmGestionarProductores(string idProductor, string nomProductor)
+        public FrmGestionarProductores(string idProductores)
         {
             InitializeComponent();
 
-            this.idProductor = idProductor;
-            this.nomProductor = nomProductor;
+            this.idProductores = idProductores;
 
-            if (!string.IsNullOrEmpty(this.idProductor) && !string.IsNullOrEmpty(this.nomProductor))
+            if (!string.IsNullOrEmpty(this.idProductores))
             {
                 cargarDatos();
             }
+           
         }
+
         private void cargarDatos()
         {
             using (videotiendaEntities db = new videotiendaEntities())
             {
-                oProductores = db.PRODUCTORES.Find(nomProductor);
+                oProductores = db.PRODUCTORES.Find(int.Parse(idProductores));
+
                 txtNombre.Text = oProductores.NOM_PROD;
+                
             }
         }
+
         private void FrmGestionarProductores_Load(object sender, EventArgs e)
         {
-            this.txtNombre.Select();
+            
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -53,23 +58,23 @@ namespace VideotiendaWFApp.Views
             {
                 using (videotiendaEntities db = new videotiendaEntities())
                 {
-                    if(this.nomProductor == null)
-                    {
-                        oProductores = new PRODUCTORES();
-                    }
-                    oProductores.NOM_PROD = txtNombre.Text;
+                    if(this.idProductores == null)
 
-                    if(this.nomProductor == null)
-                    {
+                        oProductores = new PRODUCTORES();
+                    
+                    oProductores.NOM_PROD = this.txtNombre.Text;
+
+                    if(this.idProductores == null)
+                    
                         db.PRODUCTORES.Add(oProductores);
-                    }
+                    
                     else
-                    {
+                    
                         db.Entry(oProductores).State = System.Data.Entity.EntityState.Modified;
                         db.SaveChanges();
 
                         this.Close();
-                    }
+                    
                 }
             }
         }

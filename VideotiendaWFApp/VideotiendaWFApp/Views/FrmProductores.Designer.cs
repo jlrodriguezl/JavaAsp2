@@ -34,14 +34,14 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.gbxDatos = new System.Windows.Forms.GroupBox();
-            this.grDatos = new System.Windows.Forms.DataGridView();
+            this.grdProductores = new System.Windows.Forms.DataGridView();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.gbxFiltro.SuspendLayout();
             this.gbxDatos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grDatos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdProductores)).BeginInit();
             this.SuspendLayout();
             // 
             // gbxFiltro
@@ -97,7 +97,7 @@
             // 
             // gbxDatos
             // 
-            this.gbxDatos.Controls.Add(this.grDatos);
+            this.gbxDatos.Controls.Add(this.grdProductores);
             this.gbxDatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gbxDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxDatos.Location = new System.Drawing.Point(23, 106);
@@ -107,17 +107,17 @@
             this.gbxDatos.TabStop = false;
             this.gbxDatos.Text = "Productores";
             // 
-            // grDatos
+            // grdProductores
             // 
-            this.grDatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.grDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grDatos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grDatos.Location = new System.Drawing.Point(3, 17);
-            this.grDatos.MultiSelect = false;
-            this.grDatos.Name = "grDatos";
-            this.grDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grDatos.Size = new System.Drawing.Size(576, 251);
-            this.grDatos.TabIndex = 0;
+            this.grdProductores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.grdProductores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdProductores.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdProductores.Location = new System.Drawing.Point(3, 17);
+            this.grdProductores.MultiSelect = false;
+            this.grdProductores.Name = "grdProductores";
+            this.grdProductores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.grdProductores.Size = new System.Drawing.Size(576, 251);
+            this.grdProductores.TabIndex = 0;
             // 
             // btnNuevo
             // 
@@ -150,6 +150,7 @@
             this.btnEliminar.TabIndex = 4;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnRegresar
             // 
@@ -180,7 +181,7 @@
             this.gbxFiltro.ResumeLayout(false);
             this.gbxFiltro.PerformLayout();
             this.gbxDatos.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.grDatos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdProductores)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -193,7 +194,7 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.DataGridView grDatos;
+        private System.Windows.Forms.DataGridView grdProductores;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnEliminar;
