@@ -102,11 +102,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\FormMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormMenu.Designer.cs">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmCategoria.Designer.cs">
+      <DependentUpon>FrmCategoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\FrmDominios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\FrmDominios.Designer.cs">
       <DependentUpon>FrmDominios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmGestionarCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmGestionarCategorias.Designer.cs">
+      <DependentUpon>FrmGestionarCategorias.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\FrmGestionarDominios.cs">
       <SubType>Form</SubType>
@@ -114,7 +132,31 @@
     <Compile Include="Views\FrmGestionarDominios.Designer.cs">
       <DependentUpon>FrmGestionarDominios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\FrmGestionarPersonas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmGestionarPersonas.Designer.cs">
+      <DependentUpon>FrmGestionarPersonas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\FrmGestionarProductores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmGestionarProductores.Designer.cs">
+      <DependentUpon>FrmGestionarProductores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Frmpersonas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Frmpersonas.Designer.cs">
+      <DependentUpon>Frmpersonas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmProductores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmProductores.Designer.cs">
+      <DependentUpon>FrmProductores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmVideojuegos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\FrmGestionarProductores.Designer.cs">
@@ -126,6 +168,15 @@
     <Compile Include="Views\FrmProductores.Designer.cs">
       <DependentUpon>FrmProductores.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -135,17 +186,38 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\FormMenu.resx">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmCategoria.resx">
+      <DependentUpon>FrmCategoria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\FrmDominios.resx">
       <DependentUpon>FrmDominios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmGestionarCategorias.resx">
+      <DependentUpon>FrmGestionarCategorias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FrmGestionarDominios.resx">
       <DependentUpon>FrmGestionarDominios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmGestionarPersonas.resx">
+      <DependentUpon>FrmGestionarPersonas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\FrmGestionarProductores.resx">
       <DependentUpon>FrmGestionarProductores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Frmpersonas.resx">
+      <DependentUpon>Frmpersonas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\FrmProductores.resx">
       <DependentUpon>FrmProductores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmVideojuegos.resx">
+      <DependentUpon>FrmVideojuegos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Models\ModelVideotienda.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
