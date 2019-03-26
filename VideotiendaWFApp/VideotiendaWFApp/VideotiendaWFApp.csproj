@@ -126,12 +126,21 @@
     <Compile Include="Views\FrmGestionarDominios.Designer.cs">
       <DependentUpon>FrmGestionarDominios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\FrmGestionarPersonas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmGestionarPersonas.Designer.cs">
+      <DependentUpon>FrmGestionarPersonas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\FrmVideojuegos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\FrmVideojuegos.Designer.cs">
       <DependentUpon>FrmVideojuegos.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -152,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FrmGestionarDominios.resx">
       <DependentUpon>FrmGestionarDominios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmGestionarPersonas.resx">
+      <DependentUpon>FrmGestionarPersonas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FrmVideojuegos.resx">
       <DependentUpon>FrmVideojuegos.cs</DependentUpon>
