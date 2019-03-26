@@ -63,5 +63,10 @@ namespace VideotiendaWFApp.Views
             cargarCategorias();
             cargarProductores();
         }
+
+        private void cboCategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
