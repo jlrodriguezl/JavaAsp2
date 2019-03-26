@@ -56,9 +56,9 @@ namespace VideotiendaWFApp.Views
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.grdDatosP = new System.Windows.Forms.DataGridView();
-            this.videotiendaDataSet = new VideotiendaWFApp.videotiendaDataSet();
+            //this.videotiendaDataSet = new VideotiendaWFApp.videotiendaDataSet();
             this.pERSONASBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pERSONASTableAdapter = new VideotiendaWFApp.videotiendaDataSetTableAdapters.PERSONASTableAdapter();
+            //this.pERSONASTableAdapter = new VideotiendaWFApp.videotiendaDataSetTableAdapters.PERSONASTableAdapter();
             this.nRODOCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tIPODOCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nOMBRESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,7 +70,7 @@ namespace VideotiendaWFApp.Views
             this.gbxFiltroP.SuspendLayout();
             this.gbxDatosP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdDatosP)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.videotiendaDataSet)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.videotiendaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pERSONASBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -334,17 +334,17 @@ namespace VideotiendaWFApp.Views
             // 
             // videotiendaDataSet
             // 
-            this.videotiendaDataSet.DataSetName = "videotiendaDataSet";
-            this.videotiendaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            //this.videotiendaDataSet.DataSetName = "videotiendaDataSet";
+            //this.videotiendaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // pERSONASBindingSource
             // 
             this.pERSONASBindingSource.DataMember = "PERSONAS";
-            this.pERSONASBindingSource.DataSource = this.videotiendaDataSet;
+            //this.pERSONASBindingSource.DataSource = this.videotiendaDataSet;
             // 
             // pERSONASTableAdapter
             // 
-            this.pERSONASTableAdapter.ClearBeforeFill = true;
+            //this.pERSONASTableAdapter.ClearBeforeFill = true;
             // 
             // nRODOCDataGridViewTextBoxColumn
             // 
@@ -410,7 +410,7 @@ namespace VideotiendaWFApp.Views
             this.gbxFiltroP.PerformLayout();
             this.gbxDatosP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdDatosP)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.videotiendaDataSet)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.videotiendaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pERSONASBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -458,9 +458,9 @@ namespace VideotiendaWFApp.Views
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.DataGridView grdDatosP;
-        private videotiendaDataSet videotiendaDataSet;
+        //private videotiendaDataSet videotiendaDataSet;
         private System.Windows.Forms.BindingSource pERSONASBindingSource;
-        private videotiendaDataSetTableAdapters.PERSONASTableAdapter pERSONASTableAdapter;
+        //private videotiendaDataSetTableAdapters.PERSONASTableAdapter pERSONASTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn nRODOCDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tIPODOCDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nOMBRESDataGridViewTextBoxColumn;
