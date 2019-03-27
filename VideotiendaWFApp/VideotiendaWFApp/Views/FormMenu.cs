@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace VideotiendaWFApp.Views
 {
-    public partial class FormMenu : Form
+    public partial class FrmMenu : Form
     {
-        public FormMenu()
+        public FrmMenu()
         {
             InitializeComponent();
         }
