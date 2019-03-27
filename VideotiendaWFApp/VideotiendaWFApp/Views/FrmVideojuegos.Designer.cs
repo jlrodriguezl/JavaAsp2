@@ -29,16 +29,19 @@
         private void InitializeComponent()
         {
             this.gbxFiltro = new System.Windows.Forms.GroupBox();
-            this.gbxDatos = new System.Windows.Forms.GroupBox();
-            this.lblCategoria = new System.Windows.Forms.Label();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.cboProd = new System.Windows.Forms.ComboBox();
+            this.cboCategoria = new System.Windows.Forms.ComboBox();
             this.lblProd = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.cboCategoria = new System.Windows.Forms.ComboBox();
-            this.cboProd = new System.Windows.Forms.ComboBox();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.lblCategoria = new System.Windows.Forms.Label();
+            this.gbxDatos = new System.Windows.Forms.GroupBox();
+            this.grdVideojuegos = new System.Windows.Forms.DataGridView();
             this.gbxFiltro.SuspendLayout();
+            this.gbxDatos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdVideojuegos)).BeginInit();
             this.SuspendLayout();
             // 
             // gbxFiltro
@@ -60,26 +63,48 @@
             this.gbxFiltro.TabStop = false;
             this.gbxFiltro.Text = "Filtro de Búsqueda";
             // 
-            // gbxDatos
+            // btnLimpiar
             // 
-            this.gbxDatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.gbxDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxDatos.Location = new System.Drawing.Point(13, 120);
-            this.gbxDatos.Name = "gbxDatos";
-            this.gbxDatos.Size = new System.Drawing.Size(586, 301);
-            this.gbxDatos.TabIndex = 1;
-            this.gbxDatos.TabStop = false;
-            this.gbxDatos.Text = "Videojuegos";
+            this.btnLimpiar.Location = new System.Drawing.Point(514, 53);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(100, 30);
+            this.btnLimpiar.TabIndex = 4;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
-            // lblCategoria
+            // btnBuscar
             // 
-            this.lblCategoria.AutoSize = true;
-            this.lblCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoria.Location = new System.Drawing.Point(7, 21);
-            this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(63, 15);
-            this.lblCategoria.TabIndex = 0;
-            this.lblCategoria.Text = "Categoría:";
+            this.btnBuscar.Location = new System.Drawing.Point(392, 53);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(100, 30);
+            this.btnBuscar.TabIndex = 4;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(414, 20);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(200, 21);
+            this.txtNombre.TabIndex = 3;
+            // 
+            // cboProd
+            // 
+            this.cboProd.FormattingEnabled = true;
+            this.cboProd.Location = new System.Drawing.Point(76, 53);
+            this.cboProd.Name = "cboProd";
+            this.cboProd.Size = new System.Drawing.Size(250, 23);
+            this.cboProd.TabIndex = 2;
+            // 
+            // cboCategoria
+            // 
+            this.cboCategoria.FormattingEnabled = true;
+            this.cboCategoria.Location = new System.Drawing.Point(76, 18);
+            this.cboCategoria.Name = "cboCategoria";
+            this.cboCategoria.Size = new System.Drawing.Size(250, 23);
+            this.cboCategoria.TabIndex = 1;
             // 
             // lblProd
             // 
@@ -101,52 +126,43 @@
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre:";
             // 
-            // cboCategoria
+            // lblCategoria
             // 
-            this.cboCategoria.FormattingEnabled = true;
-            this.cboCategoria.Location = new System.Drawing.Point(76, 18);
-            this.cboCategoria.Name = "cboCategoria";
-            this.cboCategoria.Size = new System.Drawing.Size(250, 23);
-            this.cboCategoria.TabIndex = 1;
+            this.lblCategoria.AutoSize = true;
+            this.lblCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategoria.Location = new System.Drawing.Point(7, 21);
+            this.lblCategoria.Name = "lblCategoria";
+            this.lblCategoria.Size = new System.Drawing.Size(63, 15);
+            this.lblCategoria.TabIndex = 0;
+            this.lblCategoria.Text = "Categoría:";
             // 
-            // cboProd
+            // gbxDatos
             // 
-            this.cboProd.FormattingEnabled = true;
-            this.cboProd.Location = new System.Drawing.Point(76, 53);
-            this.cboProd.Name = "cboProd";
-            this.cboProd.Size = new System.Drawing.Size(250, 23);
-            this.cboProd.TabIndex = 2;
+            this.gbxDatos.Controls.Add(this.grdVideojuegos);
+            this.gbxDatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.gbxDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbxDatos.Location = new System.Drawing.Point(13, 120);
+            this.gbxDatos.Name = "gbxDatos";
+            this.gbxDatos.Size = new System.Drawing.Size(628, 301);
+            this.gbxDatos.TabIndex = 1;
+            this.gbxDatos.TabStop = false;
+            this.gbxDatos.Text = "Videojuegos";
             // 
-            // txtNombre
+            // grdVideojuegos
             // 
-            this.txtNombre.Location = new System.Drawing.Point(414, 20);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(200, 21);
-            this.txtNombre.TabIndex = 3;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Location = new System.Drawing.Point(392, 53);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(100, 30);
-            this.btnBuscar.TabIndex = 4;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.Location = new System.Drawing.Point(514, 53);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(100, 30);
-            this.btnLimpiar.TabIndex = 4;
-            this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.grdVideojuegos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.grdVideojuegos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdVideojuegos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdVideojuegos.Location = new System.Drawing.Point(3, 17);
+            this.grdVideojuegos.Name = "grdVideojuegos";
+            this.grdVideojuegos.Size = new System.Drawing.Size(622, 281);
+            this.grdVideojuegos.TabIndex = 0;
             // 
             // FrmVideojuegos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(817, 450);
+            this.ClientSize = new System.Drawing.Size(664, 450);
             this.ControlBox = false;
             this.Controls.Add(this.gbxDatos);
             this.Controls.Add(this.gbxFiltro);
@@ -156,6 +172,8 @@
             this.Load += new System.EventHandler(this.FrmVideojuegos_Load);
             this.gbxFiltro.ResumeLayout(false);
             this.gbxFiltro.PerformLayout();
+            this.gbxDatos.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grdVideojuegos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -172,5 +190,6 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.ComboBox cboProd;
         private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.DataGridView grdVideojuegos;
     }
 }
