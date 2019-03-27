@@ -17,6 +17,30 @@ namespace VideotiendaWFApp.Views
             InitializeComponent();
         }
 
+        public void cargarVideojuegos()
+        {
+            using (videotiendaEntities db = new videotiendaEntities())
+            {
+                //Consultar todos los datos
+                var lstVideojuegos = from v in db.VIDEOJUEGOS
+                                     join p in db.PRODUCTORES on v.ID_PROD equals p.ID_PROD
+                                     join cv in db.CAT_VIDEOJUEGOS on v.NRO_REFERENCIA equals cv.NRO_REFERENCIA
+                                     join c in db.CATEGORIAS on cv.ID_CATEGORIA equals c.ID_CATEGORIA
+                                     select new
+                                     {
+                                         NRO_REERENCIA = v.NRO_REFERENCIA,
+                                         NOM_VIDEOJUEGO = v.NOM_VIDEOJUEGO,
+                                         IMG_VIDEOJUEGO = v.IMG_VIDEOJUEGO,
+                                         ID_PROD = p.ID_PROD,
+                                         NOM_PROD = p.NOM_PROD,
+                                         ID_CATEGORIA = c.ID_CATEGORIA,
+                                         NOM_CATEGORIA = c.NOM_CATEGORIA,
+                                         ID_CAT_VIDEOJUEGO = cv.ID_CAT_VIDEOJUEGO
+                                     };               
+                grdVideojuegos.DataSource = lstVideojuegos.ToList();
+            }
+        }
+
         private void cargarCategorias()
         {
             using (videotiendaEntities db = new videotiendaEntities())
@@ -62,6 +86,53 @@ namespace VideotiendaWFApp.Views
         {
             cargarCategorias();
             cargarProductores();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            using (videotiendaEntities db = new videotiendaEntities())
+            {
+                //Consultar todos los datos
+                var lstVideojuegos = from v in db.VIDEOJUEGOS
+                                     join p in db.PRODUCTORES on v.ID_PROD equals p.ID_PROD
+                                     join cv in db.CAT_VIDEOJUEGOS on v.NRO_REFERENCIA equals cv.NRO_REFERENCIA
+                                     join c in db.CATEGORIAS on cv.ID_CATEGORIA equals c.ID_CATEGORIA
+                                     select new
+                                     {
+                                         NRO_REERENCIA = v.NRO_REFERENCIA,
+                                         NOM_VIDEOJUEGO = v.NOM_VIDEOJUEGO,
+                                         IMG_VIDEOJUEGO = v.IMG_VIDEOJUEGO,
+                                         ID_PROD = p.ID_PROD,
+                                         NOM_PROD = p.NOM_PROD,
+                                         ID_CATEGORIA = c.ID_CATEGORIA,
+                                         NOM_CATEGORIA = c.NOM_CATEGORIA,
+                                         ID_CAT_VIDEOJUEGO = cv.ID_CAT_VIDEOJUEGO
+                                     };
+
+                //Aplicar filtros dependiendo de lo que el usuario haya ingresado en la pantalla
+                if (int.Parse(this.cboCategoria.SelectedValue.ToString()) != 0)
+                {
+                    lstVideojuegos = lstVideojuegos.Where(v => v.ID_CATEGORIA.Equals(this.cboCategoria.SelectedValue));
+                }
+                if (int.Parse(this.cboProd.SelectedValue.ToString()) != 0)
+                {
+                    lstVideojuegos = lstVideojuegos.Where(v => v.ID_PROD.Equals(this.cboProd.SelectedValue));
+                }
+                if (!string.IsNullOrEmpty(this.txtNombre.Text))
+                {
+                    lstVideojuegos = lstVideojuegos.Where(v => v.NOM_VIDEOJUEGO.Contains(this.txtNombre.Text));
+                }
+                //Retornar lista de videojuegos con los filtros aplicados
+                grdVideojuegos.DataSource = lstVideojuegos.ToList();
+            }
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            txtNombre.Text = "";
+            cboCategoria.SelectedIndex = 0;
+            cboProd.SelectedIndex = 0;
+            cargarVideojuegos();
         }
     }
 }
