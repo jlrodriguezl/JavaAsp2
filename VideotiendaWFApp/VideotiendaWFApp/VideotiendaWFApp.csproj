@@ -147,12 +147,6 @@
     <Compile Include="Views\FrmGestionarProductores.Designer.cs">
       <DependentUpon>FrmGestionarProductores.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Frmpersonas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Frmpersonas.Designer.cs">
-      <DependentUpon>Frmpersonas.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\FrmProductores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,9 +197,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FrmGestionarProductores.resx">
       <DependentUpon>FrmGestionarProductores.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Frmpersonas.resx">
-      <DependentUpon>Frmpersonas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FrmProductores.resx">
       <DependentUpon>FrmProductores.cs</DependentUpon>
