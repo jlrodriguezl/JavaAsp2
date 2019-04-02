@@ -39,6 +39,7 @@
             this.lblCategoria = new System.Windows.Forms.Label();
             this.gbxDatos = new System.Windows.Forms.GroupBox();
             this.grdVideojuegos = new System.Windows.Forms.DataGridView();
+            this.btnNuevo = new System.Windows.Forms.Button();
             this.gbxFiltro.SuspendLayout();
             this.gbxDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdVideojuegos)).BeginInit();
@@ -158,12 +159,24 @@
             this.grdVideojuegos.Size = new System.Drawing.Size(622, 281);
             this.grdVideojuegos.TabIndex = 0;
             // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevo.Location = new System.Drawing.Point(263, 437);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(100, 30);
+            this.btnNuevo.TabIndex = 2;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
             // FrmVideojuegos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(664, 450);
+            this.ClientSize = new System.Drawing.Size(664, 492);
             this.ControlBox = false;
+            this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.gbxDatos);
             this.Controls.Add(this.gbxFiltro);
             this.Name = "FrmVideojuegos";
@@ -191,5 +204,6 @@
         private System.Windows.Forms.ComboBox cboProd;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.DataGridView grdVideojuegos;
+        private System.Windows.Forms.Button btnNuevo;
     }
 }

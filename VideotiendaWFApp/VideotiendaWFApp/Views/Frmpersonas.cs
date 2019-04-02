@@ -32,16 +32,16 @@ namespace VideotiendaWFApp.Views
                                                           ID_CATEGORIA = c.ID_CATEGORIA,
                                                           NOM_CATEGORIA = c.NOM_CATEGORIA
                                                       });
-                this.cboCategoria.DataSource = lstCategorias.ToList();
+                /*this.cboCategoria.DataSource = lstCategorias.ToList();
                 this.cboCategoria.DisplayMember = "NOM_CATEGORIA";
-                this.cboCategoria.ValueMember = "ID_CATEGORIA";
+                this.cboCategoria.ValueMember = "ID_CATEGORIA";*/
             }
         }
 
         private void Frmpersonas_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'videotiendaDataSet.PERSONAS' Puede moverla o quitarla según sea necesario.
-            this.pERSONASTableAdapter.Fill(this.videotiendaDataSet.PERSONAS);
+            //this.pERSONASTableAdapter.Fill(this.videotiendaDataSet.PERSONAS);
             refrescarTabla();
             this.txtdocumento.Select();
         }
@@ -119,8 +119,8 @@ namespace VideotiendaWFApp.Views
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            Views.FrmGestionarPersonas frmGestionarDominios = new Views.FrmGestionarPersonas(null, null);
-            frmGestionarPersonas.ShowDialog();
+            /*Views.FrmGestionarPersonas frmGestionarDominios = new Views.FrmGestionarPersonas(null, null);
+            frmGestionarPersonas.ShowDialog();*/
 
             refrescarTabla();
         }
@@ -133,10 +133,10 @@ namespace VideotiendaWFApp.Views
             if (d != null)
             {
                 //Inicializar formulario de edición de dominios
-                Views.FrmGestionarPersonas frmGestionarPersonas
+                /*Views.FrmGestionarPersonas frmGestionarPersonas
                     = new Views.FrmGestionarPersonas(d.TIPO_DOMINIO, d.ID_DOMINIO);
                 //Abrir formulario de edición de dominios
-                frmGestionarPersonas.ShowDialog();
+                frmGestionarPersonas.ShowDialog();*/
                 //Refrescar tabla cuando regrese del formulario de edición
                 refrescarTabla();
             }
