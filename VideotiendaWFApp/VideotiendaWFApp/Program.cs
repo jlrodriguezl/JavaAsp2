@@ -17,7 +17,7 @@ namespace VideotiendaWFApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmGestionarVideojuegos());
+            Application.Run(new VideotiendaWFApp.Views.frmLogin());
         }
     }
 }

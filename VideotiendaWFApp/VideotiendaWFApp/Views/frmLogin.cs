@@ -12,9 +12,9 @@ using VideotiendaWFApp.Views;
 
 namespace VideotiendaWFApp.Views
 {
-    public partial class Login : Form
+    public partial class frmLogin : Form
     {
-        public Login()
+        public frmLogin()
         {
             InitializeComponent();
             
@@ -34,7 +34,7 @@ namespace VideotiendaWFApp.Views
                 if(lstPersonas.Count() > 0)
                 {
                     this.Hide();
-                    Views.FormMenu formMenu = new FormMenu();                    
+                    Views.FrmMenu formMenu = new FrmMenu();                    
                     formMenu.Show();
                     
 
