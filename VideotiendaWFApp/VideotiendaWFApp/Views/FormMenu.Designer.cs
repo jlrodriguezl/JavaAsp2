@@ -161,6 +161,7 @@
             this.btnVideojuegos.Size = new System.Drawing.Size(110, 115);
             this.btnVideojuegos.TabIndex = 5;
             this.btnVideojuegos.UseVisualStyleBackColor = true;
+            this.btnVideojuegos.Click += new System.EventHandler(this.btnVideojuegos_Click);
             // 
             // btnPesonas
             // 
@@ -170,6 +171,7 @@
             this.btnPesonas.Size = new System.Drawing.Size(110, 115);
             this.btnPesonas.TabIndex = 4;
             this.btnPesonas.UseVisualStyleBackColor = true;
+            this.btnPesonas.Click += new System.EventHandler(this.btnPesonas_Click);
             // 
             // btnAdministracion
             // 
@@ -180,6 +182,7 @@
             this.btnAdministracion.Size = new System.Drawing.Size(110, 115);
             this.btnAdministracion.TabIndex = 1;
             this.btnAdministracion.UseVisualStyleBackColor = false;
+            this.btnAdministracion.Click += new System.EventHandler(this.btnAdministracion_Click);
             // 
             // btnCategorias
             // 
@@ -189,6 +192,7 @@
             this.btnCategorias.Size = new System.Drawing.Size(110, 115);
             this.btnCategorias.TabIndex = 3;
             this.btnCategorias.UseVisualStyleBackColor = true;
+            this.btnCategorias.Click += new System.EventHandler(this.btnCategorias_Click);
             // 
             // btnAlquiler
             // 
@@ -207,6 +211,7 @@
             this.btnProductores.Size = new System.Drawing.Size(110, 115);
             this.btnProductores.TabIndex = 0;
             this.btnProductores.UseVisualStyleBackColor = true;
+            this.btnProductores.Click += new System.EventHandler(this.btnProductores_Click);
             // 
             // panel2
             // 

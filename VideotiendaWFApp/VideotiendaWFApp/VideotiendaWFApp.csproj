@@ -165,14 +165,17 @@
     <Compile Include="Views\FrmProductores.Designer.cs">
       <DependentUpon>FrmProductores.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\FrmVideojuegos.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Views\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmVideojuegos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmVideojuegos.designer.cs">
+      <DependentUpon>FrmVideojuegos.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -216,11 +219,11 @@
     <EmbeddedResource Include="Views\FrmProductores.resx">
       <DependentUpon>FrmProductores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\FrmVideojuegos.resx">
-      <DependentUpon>FrmVideojuegos.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Views\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmVideojuegos.resx">
+      <DependentUpon>FrmVideojuegos.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Models\ModelVideotienda.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

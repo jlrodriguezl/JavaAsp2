@@ -32,54 +32,39 @@ namespace VideotiendaWFApp.Views
         {
             this.components = new System.ComponentModel.Container();
             this.gbxFiltroP = new System.Windows.Forms.GroupBox();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.txtContrasena = new System.Windows.Forms.TextBox();
+            this.lblcontrasena = new System.Windows.Forms.Label();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.lblDireccion = new System.Windows.Forms.Label();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
+            this.lblcorreo = new System.Windows.Forms.Label();
+            this.txtdocumento = new System.Windows.Forms.TextBox();
+            this.lbltipopersona = new System.Windows.Forms.Label();
+            this.txtCelular = new System.Windows.Forms.TextBox();
+            this.txtnombre = new System.Windows.Forms.TextBox();
+            this.cbxTipoPersona = new System.Windows.Forms.ComboBox();
             this.cbxTipoDocumento = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblnombres = new System.Windows.Forms.Label();
             this.lblnumdoc = new System.Windows.Forms.Label();
             this.lbltipodoc = new System.Windows.Forms.Label();
-            this.gbxDatosP = new System.Windows.Forms.GroupBox();
-            this.cbxTipoPersona = new System.Windows.Forms.ComboBox();
-            this.txtnombre = new System.Windows.Forms.TextBox();
-            this.txtCelular = new System.Windows.Forms.TextBox();
-            this.lbltipopersona = new System.Windows.Forms.Label();
-            this.txtdocumento = new System.Windows.Forms.TextBox();
-            this.lblcorreo = new System.Windows.Forms.Label();
-            this.txtCorreo = new System.Windows.Forms.TextBox();
-            this.lblDireccion = new System.Windows.Forms.Label();
-            this.txtDireccion = new System.Windows.Forms.TextBox();
-            this.lblcontrasena = new System.Windows.Forms.Label();
-            this.txtContrasena = new System.Windows.Forms.TextBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.btnLimpiar = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
             this.btnRegresar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.gbxDatosP = new System.Windows.Forms.GroupBox();
             this.grdDatosP = new System.Windows.Forms.DataGridView();
-            //this.videotiendaDataSet = new VideotiendaWFApp.videotiendaDataSet();
             this.pERSONASBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            //this.pERSONASTableAdapter = new VideotiendaWFApp.videotiendaDataSetTableAdapters.PERSONASTableAdapter();
-            this.nRODOCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tIPODOCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nOMBRESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cELULARDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cORREODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dIRECCIONDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tIPOPERSONADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cONTRASENADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbxFiltroP.SuspendLayout();
             this.gbxDatosP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdDatosP)).BeginInit();
-            //((System.ComponentModel.ISupportInitialize)(this.videotiendaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pERSONASBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // gbxFiltroP
             // 
-            this.gbxFiltroP.Controls.Add(this.btnRegresar);
-            this.gbxFiltroP.Controls.Add(this.btnEliminar);
-            this.gbxFiltroP.Controls.Add(this.button1);
-            this.gbxFiltroP.Controls.Add(this.btnNuevo);
             this.gbxFiltroP.Controls.Add(this.btnLimpiar);
             this.gbxFiltroP.Controls.Add(this.btnBuscar);
             this.gbxFiltroP.Controls.Add(this.txtContrasena);
@@ -102,11 +87,119 @@ namespace VideotiendaWFApp.Views
             this.gbxFiltroP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxFiltroP.Location = new System.Drawing.Point(12, 12);
             this.gbxFiltroP.Name = "gbxFiltroP";
-            this.gbxFiltroP.Size = new System.Drawing.Size(1167, 195);
+            this.gbxFiltroP.Size = new System.Drawing.Size(1040, 195);
             this.gbxFiltroP.TabIndex = 0;
             this.gbxFiltroP.TabStop = false;
             this.gbxFiltroP.Text = " Filtro de busqueda";
             this.gbxFiltroP.Enter += new System.EventHandler(this.gbxFiltroP_Enter);
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Location = new System.Drawing.Point(501, 166);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpiar.TabIndex = 17;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(405, 166);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 16;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            // 
+            // txtContrasena
+            // 
+            this.txtContrasena.Location = new System.Drawing.Point(689, 124);
+            this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.Size = new System.Drawing.Size(200, 21);
+            this.txtContrasena.TabIndex = 15;
+            // 
+            // lblcontrasena
+            // 
+            this.lblcontrasena.AutoSize = true;
+            this.lblcontrasena.CausesValidation = false;
+            this.lblcontrasena.Location = new System.Drawing.Point(578, 124);
+            this.lblcontrasena.Name = "lblcontrasena";
+            this.lblcontrasena.Size = new System.Drawing.Size(80, 15);
+            this.lblcontrasena.TabIndex = 14;
+            this.lblcontrasena.Text = "Contraseña";
+            // 
+            // txtDireccion
+            // 
+            this.txtDireccion.Location = new System.Drawing.Point(689, 93);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(200, 21);
+            this.txtDireccion.TabIndex = 13;
+            // 
+            // lblDireccion
+            // 
+            this.lblDireccion.AutoSize = true;
+            this.lblDireccion.CausesValidation = false;
+            this.lblDireccion.Location = new System.Drawing.Point(578, 93);
+            this.lblDireccion.Name = "lblDireccion";
+            this.lblDireccion.Size = new System.Drawing.Size(68, 15);
+            this.lblDireccion.TabIndex = 12;
+            this.lblDireccion.Text = "Direccion";
+            // 
+            // txtCorreo
+            // 
+            this.txtCorreo.Location = new System.Drawing.Point(689, 61);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(200, 21);
+            this.txtCorreo.TabIndex = 11;
+            // 
+            // lblcorreo
+            // 
+            this.lblcorreo.AutoSize = true;
+            this.lblcorreo.CausesValidation = false;
+            this.lblcorreo.Location = new System.Drawing.Point(578, 61);
+            this.lblcorreo.Name = "lblcorreo";
+            this.lblcorreo.Size = new System.Drawing.Size(50, 15);
+            this.lblcorreo.TabIndex = 10;
+            this.lblcorreo.Text = "Correo";
+            // 
+            // txtdocumento
+            // 
+            this.txtdocumento.Location = new System.Drawing.Point(154, 61);
+            this.txtdocumento.Name = "txtdocumento";
+            this.txtdocumento.Size = new System.Drawing.Size(200, 21);
+            this.txtdocumento.TabIndex = 9;
+            // 
+            // lbltipopersona
+            // 
+            this.lbltipopersona.AutoSize = true;
+            this.lbltipopersona.CausesValidation = false;
+            this.lbltipopersona.Location = new System.Drawing.Point(578, 27);
+            this.lbltipopersona.Name = "lbltipopersona";
+            this.lbltipopersona.Size = new System.Drawing.Size(92, 15);
+            this.lbltipopersona.TabIndex = 8;
+            this.lbltipopersona.Text = "Tipo Persona";
+            // 
+            // txtCelular
+            // 
+            this.txtCelular.Location = new System.Drawing.Point(154, 124);
+            this.txtCelular.Name = "txtCelular";
+            this.txtCelular.Size = new System.Drawing.Size(200, 21);
+            this.txtCelular.TabIndex = 7;
+            // 
+            // txtnombre
+            // 
+            this.txtnombre.Location = new System.Drawing.Point(154, 93);
+            this.txtnombre.Name = "txtnombre";
+            this.txtnombre.Size = new System.Drawing.Size(200, 21);
+            this.txtnombre.TabIndex = 6;
+            // 
+            // cbxTipoPersona
+            // 
+            this.cbxTipoPersona.FormattingEnabled = true;
+            this.cbxTipoPersona.Location = new System.Drawing.Point(689, 27);
+            this.cbxTipoPersona.Name = "cbxTipoPersona";
+            this.cbxTipoPersona.Size = new System.Drawing.Size(200, 23);
+            this.cbxTipoPersona.TabIndex = 5;
             // 
             // cbxTipoDocumento
             // 
@@ -154,6 +247,47 @@ namespace VideotiendaWFApp.Views
             this.lbltipodoc.Text = "Tipo Documento";
             this.lbltipodoc.Click += new System.EventHandler(this.label1_Click);
             // 
+            // btnRegresar
+            // 
+            this.btnRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegresar.Location = new System.Drawing.Point(13, 454);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(100, 30);
+            this.btnRegresar.TabIndex = 21;
+            this.btnRegresar.Text = "Regresar";
+            this.btnRegresar.UseVisualStyleBackColor = true;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Location = new System.Drawing.Point(1076, 454);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(100, 30);
+            this.btnEliminar.TabIndex = 20;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(964, 454);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 30);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "Editar";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevo.Location = new System.Drawing.Point(849, 454);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(100, 30);
+            this.btnNuevo.TabIndex = 18;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            // 
             // gbxDatosP
             // 
             this.gbxDatosP.Controls.Add(this.grdDatosP);
@@ -166,165 +300,12 @@ namespace VideotiendaWFApp.Views
             this.gbxDatosP.TabStop = false;
             this.gbxDatosP.Text = "Usuarios";
             // 
-            // cbxTipoPersona
-            // 
-            this.cbxTipoPersona.FormattingEnabled = true;
-            this.cbxTipoPersona.Location = new System.Drawing.Point(689, 27);
-            this.cbxTipoPersona.Name = "cbxTipoPersona";
-            this.cbxTipoPersona.Size = new System.Drawing.Size(200, 23);
-            this.cbxTipoPersona.TabIndex = 5;
-            // 
-            // txtnombre
-            // 
-            this.txtnombre.Location = new System.Drawing.Point(154, 93);
-            this.txtnombre.Name = "txtnombre";
-            this.txtnombre.Size = new System.Drawing.Size(200, 21);
-            this.txtnombre.TabIndex = 6;
-            // 
-            // txtCelular
-            // 
-            this.txtCelular.Location = new System.Drawing.Point(154, 124);
-            this.txtCelular.Name = "txtCelular";
-            this.txtCelular.Size = new System.Drawing.Size(200, 21);
-            this.txtCelular.TabIndex = 7;
-            // 
-            // lbltipopersona
-            // 
-            this.lbltipopersona.AutoSize = true;
-            this.lbltipopersona.CausesValidation = false;
-            this.lbltipopersona.Location = new System.Drawing.Point(578, 27);
-            this.lbltipopersona.Name = "lbltipopersona";
-            this.lbltipopersona.Size = new System.Drawing.Size(92, 15);
-            this.lbltipopersona.TabIndex = 8;
-            this.lbltipopersona.Text = "Tipo Persona";
-            // 
-            // txtdocumento
-            // 
-            this.txtdocumento.Location = new System.Drawing.Point(154, 61);
-            this.txtdocumento.Name = "txtdocumento";
-            this.txtdocumento.Size = new System.Drawing.Size(200, 21);
-            this.txtdocumento.TabIndex = 9;
-            // 
-            // lblcorreo
-            // 
-            this.lblcorreo.AutoSize = true;
-            this.lblcorreo.CausesValidation = false;
-            this.lblcorreo.Location = new System.Drawing.Point(578, 61);
-            this.lblcorreo.Name = "lblcorreo";
-            this.lblcorreo.Size = new System.Drawing.Size(50, 15);
-            this.lblcorreo.TabIndex = 10;
-            this.lblcorreo.Text = "Correo";
-            // 
-            // txtCorreo
-            // 
-            this.txtCorreo.Location = new System.Drawing.Point(689, 61);
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(200, 21);
-            this.txtCorreo.TabIndex = 11;
-            // 
-            // lblDireccion
-            // 
-            this.lblDireccion.AutoSize = true;
-            this.lblDireccion.CausesValidation = false;
-            this.lblDireccion.Location = new System.Drawing.Point(578, 93);
-            this.lblDireccion.Name = "lblDireccion";
-            this.lblDireccion.Size = new System.Drawing.Size(68, 15);
-            this.lblDireccion.TabIndex = 12;
-            this.lblDireccion.Text = "Direccion";
-            // 
-            // txtDireccion
-            // 
-            this.txtDireccion.Location = new System.Drawing.Point(689, 93);
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(200, 21);
-            this.txtDireccion.TabIndex = 13;
-            // 
-            // lblcontrasena
-            // 
-            this.lblcontrasena.AutoSize = true;
-            this.lblcontrasena.CausesValidation = false;
-            this.lblcontrasena.Location = new System.Drawing.Point(578, 124);
-            this.lblcontrasena.Name = "lblcontrasena";
-            this.lblcontrasena.Size = new System.Drawing.Size(80, 15);
-            this.lblcontrasena.TabIndex = 14;
-            this.lblcontrasena.Text = "Contraseña";
-            // 
-            // txtContrasena
-            // 
-            this.txtContrasena.Location = new System.Drawing.Point(689, 124);
-            this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.Size = new System.Drawing.Size(200, 21);
-            this.txtContrasena.TabIndex = 15;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Location = new System.Drawing.Point(154, 166);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscar.TabIndex = 16;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.Location = new System.Drawing.Point(279, 166);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
-            this.btnLimpiar.TabIndex = 17;
-            this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Location = new System.Drawing.Point(431, 166);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(75, 23);
-            this.btnNuevo.TabIndex = 18;
-            this.btnNuevo.Text = "Nuevo";
-            this.btnNuevo.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(583, 166);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Editar";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Location = new System.Drawing.Point(689, 166);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminar.TabIndex = 20;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            // 
-            // btnRegresar
-            // 
-            this.btnRegresar.Location = new System.Drawing.Point(431, 116);
-            this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(75, 23);
-            this.btnRegresar.TabIndex = 21;
-            this.btnRegresar.Text = "Regresar";
-            this.btnRegresar.UseVisualStyleBackColor = true;
-            // 
             // grdDatosP
             // 
             this.grdDatosP.AllowUserToOrderColumns = true;
             this.grdDatosP.AutoGenerateColumns = false;
             this.grdDatosP.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grdDatosP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdDatosP.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nRODOCDataGridViewTextBoxColumn,
-            this.tIPODOCDataGridViewTextBoxColumn,
-            this.nOMBRESDataGridViewTextBoxColumn,
-            this.cELULARDataGridViewTextBoxColumn,
-            this.cORREODataGridViewTextBoxColumn,
-            this.dIRECCIONDataGridViewTextBoxColumn,
-            this.tIPOPERSONADataGridViewTextBoxColumn,
-            this.cONTRASENADataGridViewTextBoxColumn});
             this.grdDatosP.DataSource = this.pERSONASBindingSource;
             this.grdDatosP.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdDatosP.Location = new System.Drawing.Point(3, 17);
@@ -332,67 +313,9 @@ namespace VideotiendaWFApp.Views
             this.grdDatosP.Size = new System.Drawing.Size(1163, 214);
             this.grdDatosP.TabIndex = 0;
             // 
-            // videotiendaDataSet
-            // 
-            //this.videotiendaDataSet.DataSetName = "videotiendaDataSet";
-            //this.videotiendaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // pERSONASBindingSource
             // 
             this.pERSONASBindingSource.DataMember = "PERSONAS";
-            //this.pERSONASBindingSource.DataSource = this.videotiendaDataSet;
-            // 
-            // pERSONASTableAdapter
-            // 
-            //this.pERSONASTableAdapter.ClearBeforeFill = true;
-            // 
-            // nRODOCDataGridViewTextBoxColumn
-            // 
-            this.nRODOCDataGridViewTextBoxColumn.DataPropertyName = "NRO_DOC";
-            this.nRODOCDataGridViewTextBoxColumn.HeaderText = "NRO_DOC";
-            this.nRODOCDataGridViewTextBoxColumn.Name = "nRODOCDataGridViewTextBoxColumn";
-            // 
-            // tIPODOCDataGridViewTextBoxColumn
-            // 
-            this.tIPODOCDataGridViewTextBoxColumn.DataPropertyName = "TIPO_DOC";
-            this.tIPODOCDataGridViewTextBoxColumn.HeaderText = "TIPO_DOC";
-            this.tIPODOCDataGridViewTextBoxColumn.Name = "tIPODOCDataGridViewTextBoxColumn";
-            // 
-            // nOMBRESDataGridViewTextBoxColumn
-            // 
-            this.nOMBRESDataGridViewTextBoxColumn.DataPropertyName = "NOMBRES";
-            this.nOMBRESDataGridViewTextBoxColumn.HeaderText = "NOMBRES";
-            this.nOMBRESDataGridViewTextBoxColumn.Name = "nOMBRESDataGridViewTextBoxColumn";
-            // 
-            // cELULARDataGridViewTextBoxColumn
-            // 
-            this.cELULARDataGridViewTextBoxColumn.DataPropertyName = "CELULAR";
-            this.cELULARDataGridViewTextBoxColumn.HeaderText = "CELULAR";
-            this.cELULARDataGridViewTextBoxColumn.Name = "cELULARDataGridViewTextBoxColumn";
-            // 
-            // cORREODataGridViewTextBoxColumn
-            // 
-            this.cORREODataGridViewTextBoxColumn.DataPropertyName = "CORREO";
-            this.cORREODataGridViewTextBoxColumn.HeaderText = "CORREO";
-            this.cORREODataGridViewTextBoxColumn.Name = "cORREODataGridViewTextBoxColumn";
-            // 
-            // dIRECCIONDataGridViewTextBoxColumn
-            // 
-            this.dIRECCIONDataGridViewTextBoxColumn.DataPropertyName = "DIRECCION";
-            this.dIRECCIONDataGridViewTextBoxColumn.HeaderText = "DIRECCION";
-            this.dIRECCIONDataGridViewTextBoxColumn.Name = "dIRECCIONDataGridViewTextBoxColumn";
-            // 
-            // tIPOPERSONADataGridViewTextBoxColumn
-            // 
-            this.tIPOPERSONADataGridViewTextBoxColumn.DataPropertyName = "TIPO_PERSONA";
-            this.tIPOPERSONADataGridViewTextBoxColumn.HeaderText = "TIPO_PERSONA";
-            this.tIPOPERSONADataGridViewTextBoxColumn.Name = "tIPOPERSONADataGridViewTextBoxColumn";
-            // 
-            // cONTRASENADataGridViewTextBoxColumn
-            // 
-            this.cONTRASENADataGridViewTextBoxColumn.DataPropertyName = "CONTRASENA";
-            this.cONTRASENADataGridViewTextBoxColumn.HeaderText = "CONTRASENA";
-            this.cONTRASENADataGridViewTextBoxColumn.Name = "cONTRASENADataGridViewTextBoxColumn";
             // 
             // Frmpersonas
             // 
@@ -400,7 +323,11 @@ namespace VideotiendaWFApp.Views
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1210, 500);
             this.ControlBox = false;
+            this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.gbxDatosP);
+            this.Controls.Add(this.btnNuevo);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.gbxFiltroP);
             this.Name = "Frmpersonas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -410,7 +337,6 @@ namespace VideotiendaWFApp.Views
             this.gbxFiltroP.PerformLayout();
             this.gbxDatosP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdDatosP)).EndInit();
-            //((System.ComponentModel.ISupportInitialize)(this.videotiendaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pERSONASBindingSource)).EndInit();
             this.ResumeLayout(false);
 

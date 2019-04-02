@@ -15,35 +15,25 @@ namespace VideotiendaAPP.Views
     {
         CATEGORIAS OCategoria = null;
         
-        private String nombreCategoria;
+        private int? idCategoria;
 
         // constructor para que reciba y setee los valores que van a tomar las variables globales 
-        public FrmGestionarCategorias(String nombreCategoria)
+        public FrmGestionarCategorias(int? idCategoria = null)
         {
             // para dibujar el formulario
             InitializeComponent();
             //Para recibir los datos de la pk ( SI SON NULL ESTAMOS INSERTANDO 
             //SI HAY DATOS (EDICION) LLAMAMOS A CARGADATOS
            
-            this.nombreCategoria = nombreCategoria;
+            this.idCategoria = idCategoria;
 
             //SI HAY DATOS (EDICION), LLAMAMOS A CARGAR DATOS ()
             // !es negar
-            if( !String.IsNullOrEmpty(this.nombreCategoria))
+            if( idCategoria != null)
             {
                 // si es modo edicion bloqueamos los txtbox de la pk
                 cargarDatos();
-                
-                this.txtNcategoria.ReadOnly = true;
-
-            }
-            else
-            {
-                // si es modo insercion habilitamos  los texbox de la pk
-                
-                this.txtNcategoria.ReadOnly = false;
-
-            }
+            }            
         }
 
         private void FrmGestionarCategorias_Load(object sender, EventArgs e)
@@ -56,7 +46,7 @@ namespace VideotiendaAPP.Views
             using (videotiendaEntities db = new videotiendaEntities())
             {
                 //odominos es el obejto  db base de datos find es buscar en la base de datos 
-                OCategoria = db.CATEGORIAS.Find(nombreCategoria);
+                OCategoria = db.CATEGORIAS.Find(idCategoria);
                
                 
               txtNcategoria.Text = OCategoria.NOM_CATEGORIA;
@@ -88,15 +78,14 @@ namespace VideotiendaAPP.Views
                 using (videotiendaEntities db = new videotiendaEntities())
                 {  //capta los datos en  los espacios  y los envia a la bd
 
-                    if (this.txtNcategoria== null)
-
+                    if (this.idCategoria == null)
                         OCategoria = new CATEGORIAS();
 
                    
                     OCategoria.NOM_CATEGORIA = this.txtNcategoria.Text;
                     
                     // en modo insercion adicionamos un nuevo registro
-                    if ( this.nombreCategoria == null)
+                    if ( this.idCategoria == null)
                         db.CATEGORIAS.Add(OCategoria);
 
                     else

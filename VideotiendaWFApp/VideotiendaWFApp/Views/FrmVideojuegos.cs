@@ -140,5 +140,10 @@ namespace VideotiendaWFApp.Views
             FrmGestionarVideojuegos frmGestionarVideojuegos = new FrmGestionarVideojuegos(null);
             frmGestionarVideojuegos.ShowDialog();
         }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

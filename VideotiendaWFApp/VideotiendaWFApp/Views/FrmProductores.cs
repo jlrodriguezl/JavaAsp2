@@ -25,7 +25,11 @@ namespace VideotiendaWFApp.Views
             using (videotiendaEntities db = new videotiendaEntities())
             {
                 var lstProductores = from p in db.PRODUCTORES
-                                    select p;
+                                     select new
+                                     {
+                                         ID_PROD = p.ID_PROD,
+                                         NOM_PROD = p.NOM_PROD
+                                     };
 
                 grdProductores.DataSource = lstProductores.ToList();
             }
@@ -62,7 +66,10 @@ namespace VideotiendaWFApp.Views
             using (videotiendaEntities db = new videotiendaEntities())
             {
                 var lstProductores = from p in db.PRODUCTORES
-                                     select p;
+                                     select new {
+                                         ID_PROD = p.ID_PROD,
+                                         NOM_PROD = p.NOM_PROD
+                                     };
 
                 if (!string.IsNullOrEmpty(this.txtNombre.Text))
                 {
@@ -75,7 +82,7 @@ namespace VideotiendaWFApp.Views
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             this.txtNombre.Text = "";
-
+            refrescarTabla();
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -126,6 +133,11 @@ namespace VideotiendaWFApp.Views
             }
 
 
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
