@@ -168,15 +168,6 @@
     <Compile Include="Views\FrmVideojuegos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\FrmGestionarProductores.Designer.cs">
-      <DependentUpon>FrmGestionarProductores.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\FrmProductores.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\FrmProductores.Designer.cs">
-      <DependentUpon>FrmProductores.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
