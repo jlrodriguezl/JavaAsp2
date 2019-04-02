@@ -134,5 +134,11 @@ namespace VideotiendaWFApp.Views
             cboProd.SelectedIndex = 0;
             cargarVideojuegos();
         }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            FrmGestionarVideojuegos frmGestionarVideojuegos = new FrmGestionarVideojuegos(null);
+            frmGestionarVideojuegos.ShowDialog();
+        }
     }
 }
