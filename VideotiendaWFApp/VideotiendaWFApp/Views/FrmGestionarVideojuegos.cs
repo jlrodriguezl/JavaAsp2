@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -83,7 +84,7 @@ namespace VideotiendaWFApp.Views
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            string destFile = "~/ImgVideojuegos/";
+            //string destFile = "~/ImgVideojuegos/";
             CAT_VIDEOJUEGOS catVideojuegos = new CAT_VIDEOJUEGOS();
             //Validar que todos los campos obligatorios se hayan diligenciado
             if (string.IsNullOrEmpty(this.txtFoto.Text) || string.IsNullOrEmpty(this.txtNombre.Text) 
@@ -114,18 +115,35 @@ namespace VideotiendaWFApp.Views
                     db.SaveChanges();
 
                     //Guardar relación de Categorias con Videojuegos
-                    foreach (DataRowView item in lstCategorias.SelectedItems)
+                    //var items = lstCategorias.Items.Cast<ListViewItem>().Where(item => item.Selected);
+                    /*foreach (var item in lstCategorias.SelectedItems)
                     {
+                        string s = item.ToString();
                         catVideojuegos = new CAT_VIDEOJUEGOS();
-                        
-                        catVideojuegos.ID_CATEGORIA = int.Parse(item.Row["ID_CATEGORIA"].ToString());
+                        catVideojuegos.ID_CATEGORIA = 1;
                         catVideojuegos.NRO_REFERENCIA = oVideojuego.NRO_REFERENCIA;
 
                         db.CAT_VIDEOJUEGOS.Add(catVideojuegos);
                         db.SaveChanges();
+                    }¨*/
+                    for (int x = 0; x < this.lstCategorias.Items.Count; x++)
+                    {
+                        if (lstCategorias.GetSelected(x) == true)
+                        {                     
+
+                            catVideojuegos = new CAT_VIDEOJUEGOS();
+
+                            catVideojuegos.ID_CATEGORIA = int.Parse(lstCategorias.SelectedValue.ToString());
+                            catVideojuegos.NRO_REFERENCIA = oVideojuego.NRO_REFERENCIA;
+
+                            db.CAT_VIDEOJUEGOS.Add(catVideojuegos);
+                            db.SaveChanges();
+                        }
+
                     }
                     //Copiar foto a carpeta del sistema
-                    System.IO.File.Copy(this.txtFoto.Text, destFile+ oVideojuego.NRO_REFERENCIA+".jpg", true);
+                    
+                    System.IO.File.Copy(this.txtFoto.Text, @"..\ImgVideojuegos\"+ oVideojuego.NRO_REFERENCIA + ".jpg", true);
                     //Cerrar el formulario y volver al formulario de datos
                     this.Close();
                 }
