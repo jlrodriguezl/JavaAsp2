@@ -143,7 +143,7 @@ namespace VideotiendaWFApp.Views
                     }
                     //Copiar foto a carpeta del sistema
                     
-                    System.IO.File.Copy(this.txtFoto.Text, @"..\ImgVideojuegos\"+ oVideojuego.NRO_REFERENCIA + ".jpg", true);
+                    //System.IO.File.Copy(this.txtFoto.Text, @"..\ImgVideojuegos\"+ oVideojuego.NRO_REFERENCIA + ".jpg", true);
                     //Cerrar el formulario y volver al formulario de datos
                     this.Close();
                 }

@@ -145,7 +145,7 @@
             this.gbxDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxDatos.Location = new System.Drawing.Point(13, 120);
             this.gbxDatos.Name = "gbxDatos";
-            this.gbxDatos.Size = new System.Drawing.Size(628, 301);
+            this.gbxDatos.Size = new System.Drawing.Size(940, 301);
             this.gbxDatos.TabIndex = 1;
             this.gbxDatos.TabStop = false;
             this.gbxDatos.Text = "Videojuegos";
@@ -157,13 +157,14 @@
             this.grdVideojuegos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdVideojuegos.Location = new System.Drawing.Point(3, 17);
             this.grdVideojuegos.Name = "grdVideojuegos";
-            this.grdVideojuegos.Size = new System.Drawing.Size(622, 281);
+            this.grdVideojuegos.Size = new System.Drawing.Size(934, 281);
             this.grdVideojuegos.TabIndex = 0;
+            this.grdVideojuegos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdVideojuegos_CellContentClick);
             // 
             // btnNuevo
             // 
             this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevo.Location = new System.Drawing.Point(359, 427);
+            this.btnNuevo.Location = new System.Drawing.Point(850, 427);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(100, 30);
             this.btnNuevo.TabIndex = 2;
@@ -186,7 +187,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(664, 492);
+            this.ClientSize = new System.Drawing.Size(976, 492);
             this.ControlBox = false;
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.btnNuevo);

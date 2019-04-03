@@ -77,3 +77,4 @@ C:\wkp_poli\jrodriguez\JavaAsp2\VideotiendaWFApp\VideotiendaWFApp\bin\Debug\Enti
 C:\wkp_poli\jrodriguez\JavaAsp2\VideotiendaWFApp\VideotiendaWFApp\obj\Debug\VideotiendaWFApp.csproj.CopyComplete
 C:\wkp_poli\jrodriguez\JavaAsp2\VideotiendaWFApp\VideotiendaWFApp\obj\Debug\VideotiendaWFApp.Views.FrmMenu.resources
 C:\wkp_poli\jrodriguez\JavaAsp2\VideotiendaWFApp\VideotiendaWFApp\obj\Debug\VideotiendaWFApp.Views.frmLogin.resources
+C:\wkp_poli\jrodriguez\JavaAsp2\VideotiendaWFApp\VideotiendaWFApp\obj\Debug\VideotiendaWFApp.Views.FrmVerFoto.resources

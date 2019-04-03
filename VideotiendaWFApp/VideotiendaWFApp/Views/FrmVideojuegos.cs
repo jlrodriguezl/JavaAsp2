@@ -86,6 +86,7 @@ namespace VideotiendaWFApp.Views
         {
             cargarCategorias();
             cargarProductores();
+            cargarVideojuegos();
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -144,6 +145,14 @@ namespace VideotiendaWFApp.Views
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void grdVideojuegos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string s = grdVideojuegos.Rows[grdVideojuegos.CurrentRow.Index].
+                    Cells[2].Value.ToString();
+            FrmVerFoto frmVerFoto = new FrmVerFoto(s);
+            frmVerFoto.ShowDialog();
         }
     }
 }
