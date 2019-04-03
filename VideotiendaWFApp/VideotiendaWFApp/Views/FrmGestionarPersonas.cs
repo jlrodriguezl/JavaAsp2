@@ -13,9 +13,9 @@ namespace VideotiendaWFApp.Views
 {
     public partial class FrmGestionarPersonas : Form
     {
-        private Decimal NumDocumento;
+        private Decimal? NumDocumento;
         PERSONAS oPersona = null;
-        public FrmGestionarPersonas(Decimal NumDocumento)
+        public FrmGestionarPersonas(Decimal? NumDocumento = null)
         {
             InitializeComponent();
 

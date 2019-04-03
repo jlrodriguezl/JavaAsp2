@@ -34,8 +34,6 @@ namespace VideotiendaWFApp.Views
             this.gbxFiltroP = new System.Windows.Forms.GroupBox();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.txtContrasena = new System.Windows.Forms.TextBox();
-            this.lblcontrasena = new System.Windows.Forms.Label();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.lblDireccion = new System.Windows.Forms.Label();
             this.txtCorreo = new System.Windows.Forms.TextBox();
@@ -44,12 +42,9 @@ namespace VideotiendaWFApp.Views
             this.lbltipopersona = new System.Windows.Forms.Label();
             this.txtCelular = new System.Windows.Forms.TextBox();
             this.txtnombre = new System.Windows.Forms.TextBox();
-            this.cbxTipoPersona = new System.Windows.Forms.ComboBox();
-            this.cbxTipoDocumento = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblnombres = new System.Windows.Forms.Label();
             this.lblnumdoc = new System.Windows.Forms.Label();
-            this.lbltipodoc = new System.Windows.Forms.Label();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -57,6 +52,7 @@ namespace VideotiendaWFApp.Views
             this.gbxDatosP = new System.Windows.Forms.GroupBox();
             this.grdDatosP = new System.Windows.Forms.DataGridView();
             this.pERSONASBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cboTipoPersona = new System.Windows.Forms.ComboBox();
             this.gbxFiltroP.SuspendLayout();
             this.gbxDatosP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdDatosP)).BeginInit();
@@ -65,10 +61,9 @@ namespace VideotiendaWFApp.Views
             // 
             // gbxFiltroP
             // 
+            this.gbxFiltroP.Controls.Add(this.cboTipoPersona);
             this.gbxFiltroP.Controls.Add(this.btnLimpiar);
             this.gbxFiltroP.Controls.Add(this.btnBuscar);
-            this.gbxFiltroP.Controls.Add(this.txtContrasena);
-            this.gbxFiltroP.Controls.Add(this.lblcontrasena);
             this.gbxFiltroP.Controls.Add(this.txtDireccion);
             this.gbxFiltroP.Controls.Add(this.lblDireccion);
             this.gbxFiltroP.Controls.Add(this.txtCorreo);
@@ -77,25 +72,21 @@ namespace VideotiendaWFApp.Views
             this.gbxFiltroP.Controls.Add(this.lbltipopersona);
             this.gbxFiltroP.Controls.Add(this.txtCelular);
             this.gbxFiltroP.Controls.Add(this.txtnombre);
-            this.gbxFiltroP.Controls.Add(this.cbxTipoPersona);
-            this.gbxFiltroP.Controls.Add(this.cbxTipoDocumento);
             this.gbxFiltroP.Controls.Add(this.label1);
             this.gbxFiltroP.Controls.Add(this.lblnombres);
             this.gbxFiltroP.Controls.Add(this.lblnumdoc);
-            this.gbxFiltroP.Controls.Add(this.lbltipodoc);
             this.gbxFiltroP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gbxFiltroP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxFiltroP.Location = new System.Drawing.Point(12, 12);
             this.gbxFiltroP.Name = "gbxFiltroP";
-            this.gbxFiltroP.Size = new System.Drawing.Size(1040, 195);
+            this.gbxFiltroP.Size = new System.Drawing.Size(742, 181);
             this.gbxFiltroP.TabIndex = 0;
             this.gbxFiltroP.TabStop = false;
             this.gbxFiltroP.Text = " Filtro de busqueda";
-            this.gbxFiltroP.Enter += new System.EventHandler(this.gbxFiltroP_Enter);
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(501, 166);
+            this.btnLimpiar.Location = new System.Drawing.Point(389, 141);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
             this.btnLimpiar.TabIndex = 17;
@@ -104,33 +95,17 @@ namespace VideotiendaWFApp.Views
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(405, 166);
+            this.btnBuscar.Location = new System.Drawing.Point(271, 141);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
             this.btnBuscar.TabIndex = 16;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
-            // 
-            // txtContrasena
-            // 
-            this.txtContrasena.Location = new System.Drawing.Point(689, 124);
-            this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.Size = new System.Drawing.Size(200, 21);
-            this.txtContrasena.TabIndex = 15;
-            // 
-            // lblcontrasena
-            // 
-            this.lblcontrasena.AutoSize = true;
-            this.lblcontrasena.CausesValidation = false;
-            this.lblcontrasena.Location = new System.Drawing.Point(578, 124);
-            this.lblcontrasena.Name = "lblcontrasena";
-            this.lblcontrasena.Size = new System.Drawing.Size(80, 15);
-            this.lblcontrasena.TabIndex = 14;
-            this.lblcontrasena.Text = "Contraseña";
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(689, 93);
+            this.txtDireccion.Location = new System.Drawing.Point(525, 96);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(200, 21);
             this.txtDireccion.TabIndex = 13;
@@ -139,7 +114,7 @@ namespace VideotiendaWFApp.Views
             // 
             this.lblDireccion.AutoSize = true;
             this.lblDireccion.CausesValidation = false;
-            this.lblDireccion.Location = new System.Drawing.Point(578, 93);
+            this.lblDireccion.Location = new System.Drawing.Point(414, 96);
             this.lblDireccion.Name = "lblDireccion";
             this.lblDireccion.Size = new System.Drawing.Size(68, 15);
             this.lblDireccion.TabIndex = 12;
@@ -147,7 +122,7 @@ namespace VideotiendaWFApp.Views
             // 
             // txtCorreo
             // 
-            this.txtCorreo.Location = new System.Drawing.Point(689, 61);
+            this.txtCorreo.Location = new System.Drawing.Point(525, 64);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(200, 21);
             this.txtCorreo.TabIndex = 11;
@@ -156,7 +131,7 @@ namespace VideotiendaWFApp.Views
             // 
             this.lblcorreo.AutoSize = true;
             this.lblcorreo.CausesValidation = false;
-            this.lblcorreo.Location = new System.Drawing.Point(578, 61);
+            this.lblcorreo.Location = new System.Drawing.Point(414, 64);
             this.lblcorreo.Name = "lblcorreo";
             this.lblcorreo.Size = new System.Drawing.Size(50, 15);
             this.lblcorreo.TabIndex = 10;
@@ -164,7 +139,7 @@ namespace VideotiendaWFApp.Views
             // 
             // txtdocumento
             // 
-            this.txtdocumento.Location = new System.Drawing.Point(154, 61);
+            this.txtdocumento.Location = new System.Drawing.Point(146, 29);
             this.txtdocumento.Name = "txtdocumento";
             this.txtdocumento.Size = new System.Drawing.Size(200, 21);
             this.txtdocumento.TabIndex = 9;
@@ -173,7 +148,7 @@ namespace VideotiendaWFApp.Views
             // 
             this.lbltipopersona.AutoSize = true;
             this.lbltipopersona.CausesValidation = false;
-            this.lbltipopersona.Location = new System.Drawing.Point(578, 27);
+            this.lbltipopersona.Location = new System.Drawing.Point(414, 30);
             this.lbltipopersona.Name = "lbltipopersona";
             this.lbltipopersona.Size = new System.Drawing.Size(92, 15);
             this.lbltipopersona.TabIndex = 8;
@@ -181,39 +156,22 @@ namespace VideotiendaWFApp.Views
             // 
             // txtCelular
             // 
-            this.txtCelular.Location = new System.Drawing.Point(154, 124);
+            this.txtCelular.Location = new System.Drawing.Point(146, 92);
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(200, 21);
             this.txtCelular.TabIndex = 7;
             // 
             // txtnombre
             // 
-            this.txtnombre.Location = new System.Drawing.Point(154, 93);
+            this.txtnombre.Location = new System.Drawing.Point(146, 61);
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(200, 21);
             this.txtnombre.TabIndex = 6;
             // 
-            // cbxTipoPersona
-            // 
-            this.cbxTipoPersona.FormattingEnabled = true;
-            this.cbxTipoPersona.Location = new System.Drawing.Point(689, 27);
-            this.cbxTipoPersona.Name = "cbxTipoPersona";
-            this.cbxTipoPersona.Size = new System.Drawing.Size(200, 23);
-            this.cbxTipoPersona.TabIndex = 5;
-            // 
-            // cbxTipoDocumento
-            // 
-            this.cbxTipoDocumento.FormattingEnabled = true;
-            this.cbxTipoDocumento.Location = new System.Drawing.Point(154, 27);
-            this.cbxTipoDocumento.Name = "cbxTipoDocumento";
-            this.cbxTipoDocumento.Size = new System.Drawing.Size(200, 23);
-            this.cbxTipoDocumento.TabIndex = 4;
-            this.cbxTipoDocumento.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(47, 124);
+            this.label1.Location = new System.Drawing.Point(39, 92);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 15);
             this.label1.TabIndex = 3;
@@ -222,7 +180,7 @@ namespace VideotiendaWFApp.Views
             // lblnombres
             // 
             this.lblnombres.AutoSize = true;
-            this.lblnombres.Location = new System.Drawing.Point(47, 93);
+            this.lblnombres.Location = new System.Drawing.Point(39, 61);
             this.lblnombres.Name = "lblnombres";
             this.lblnombres.Size = new System.Drawing.Size(65, 15);
             this.lblnombres.TabIndex = 2;
@@ -231,21 +189,11 @@ namespace VideotiendaWFApp.Views
             // lblnumdoc
             // 
             this.lblnumdoc.AutoSize = true;
-            this.lblnumdoc.Location = new System.Drawing.Point(20, 61);
+            this.lblnumdoc.Location = new System.Drawing.Point(12, 29);
             this.lblnumdoc.Name = "lblnumdoc";
             this.lblnumdoc.Size = new System.Drawing.Size(92, 15);
             this.lblnumdoc.TabIndex = 1;
             this.lblnumdoc.Text = "# Documento";
-            // 
-            // lbltipodoc
-            // 
-            this.lbltipodoc.AutoSize = true;
-            this.lbltipodoc.Location = new System.Drawing.Point(0, 27);
-            this.lbltipodoc.Name = "lbltipodoc";
-            this.lbltipodoc.Size = new System.Drawing.Size(112, 15);
-            this.lbltipodoc.TabIndex = 0;
-            this.lbltipodoc.Text = "Tipo Documento";
-            this.lbltipodoc.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnRegresar
             // 
@@ -287,6 +235,7 @@ namespace VideotiendaWFApp.Views
             this.btnNuevo.TabIndex = 18;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click_1);
             // 
             // gbxDatosP
             // 
@@ -303,10 +252,8 @@ namespace VideotiendaWFApp.Views
             // grdDatosP
             // 
             this.grdDatosP.AllowUserToOrderColumns = true;
-            this.grdDatosP.AutoGenerateColumns = false;
             this.grdDatosP.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grdDatosP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdDatosP.DataSource = this.pERSONASBindingSource;
             this.grdDatosP.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdDatosP.Location = new System.Drawing.Point(3, 17);
             this.grdDatosP.Name = "grdDatosP";
@@ -316,6 +263,14 @@ namespace VideotiendaWFApp.Views
             // pERSONASBindingSource
             // 
             this.pERSONASBindingSource.DataMember = "PERSONAS";
+            // 
+            // cboTipoPersona
+            // 
+            this.cboTipoPersona.FormattingEnabled = true;
+            this.cboTipoPersona.Location = new System.Drawing.Point(525, 28);
+            this.cboTipoPersona.Name = "cboTipoPersona";
+            this.cboTipoPersona.Size = new System.Drawing.Size(200, 23);
+            this.cboTipoPersona.TabIndex = 18;
             // 
             // Frmpersonas
             // 
@@ -340,33 +295,14 @@ namespace VideotiendaWFApp.Views
             ((System.ComponentModel.ISupportInitialize)(this.pERSONASBindingSource)).EndInit();
             this.ResumeLayout(false);
 
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void gbxFiltroP_Enter(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
+        }     
         #endregion
 
         private System.Windows.Forms.GroupBox gbxFiltroP;
-        private System.Windows.Forms.Label lbltipodoc;
         private System.Windows.Forms.GroupBox gbxDatosP;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblnombres;
         private System.Windows.Forms.Label lblnumdoc;
-        private System.Windows.Forms.ComboBox cbxTipoDocumento;
-        private System.Windows.Forms.ComboBox cbxTipoPersona;
         private System.Windows.Forms.TextBox txtCelular;
         private System.Windows.Forms.TextBox txtnombre;
         private System.Windows.Forms.Label lblcorreo;
@@ -374,8 +310,6 @@ namespace VideotiendaWFApp.Views
         private System.Windows.Forms.Label lbltipopersona;
         private System.Windows.Forms.Label lblDireccion;
         private System.Windows.Forms.TextBox txtCorreo;
-        private System.Windows.Forms.TextBox txtContrasena;
-        private System.Windows.Forms.Label lblcontrasena;
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.Button btnEliminar;
@@ -395,5 +329,6 @@ namespace VideotiendaWFApp.Views
         private System.Windows.Forms.DataGridViewTextBoxColumn dIRECCIONDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tIPOPERSONADataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cONTRASENADataGridViewTextBoxColumn;
+        private System.Windows.Forms.ComboBox cboTipoPersona;
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using VideotiendaWFApp.Models;
+using VideotiendaWFApp.Views;
 
 namespace VideotiendaWFApp.Views
 {
@@ -17,31 +18,31 @@ namespace VideotiendaWFApp.Views
         {
             InitializeComponent();
         }
-        private void cargarCategorias()
+        private void cargarTipoPersona()
         {
             using (videotiendaEntities db = new videotiendaEntities())
             {
                 var firstItem = new List<dynamic>() {
-                        new { TIPO_DOC = 0, NOM_CATEGORIA = "Todas"}
+                        new { ID_DOMINIO = 0, VLRDOMINIO = "Todos"}
                     };
-                var lstCategorias = (from c1 in firstItem
-                                     select c1).Union(from c in db.CATEGORIAS
-                                                      orderby c.NOM_CATEGORIA
+                var lstTiposId = (from c1 in firstItem
+                                  select c1).Union(from d in db.DOMINIOS
+                                                   where d.TIPO_DOMINIO.Equals("TIPO_PERSONA")
+                                                      orderby d.VLRDOMINIO
                                                       select new
                                                       {
-                                                          ID_CATEGORIA = c.ID_CATEGORIA,
-                                                          NOM_CATEGORIA = c.NOM_CATEGORIA
+                                                          ID_DOMINIO = d.ID_DOMINIO,
+                                                          VLRDOMINIO = d.VLRDOMINIO
                                                       });
-                /*this.cboCategoria.DataSource = lstCategorias.ToList();
-                this.cboCategoria.DisplayMember = "NOM_CATEGORIA";
-                this.cboCategoria.ValueMember = "ID_CATEGORIA";*/
+                this.cboTipoPersona.DataSource = lstTiposId.ToList();
+                this.cboTipoPersona.DisplayMember = "VLRDOMINIO";
+                this.cboTipoPersona.ValueMember = "ID_DOMINIO";
             }
         }
 
         private void Frmpersonas_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'videotiendaDataSet.PERSONAS' Puede moverla o quitarla según sea necesario.
-            //this.pERSONASTableAdapter.Fill(this.videotiendaDataSet.PERSONAS);
+            cargarTipoPersona();
             refrescarTabla();
             this.txtdocumento.Select();
         }
@@ -52,7 +53,15 @@ namespace VideotiendaWFApp.Views
             using (videotiendaEntities db = new videotiendaEntities())
             {
                 var lstPersonas = from d in db.PERSONAS
-                                  select d;
+                                  select new {
+                                      NRO_DOC = d.NRO_DOC,
+                                      TIPO_DOC = d.TIPO_DOC,
+                                      NOMBRES = d.NOMBRES,
+                                      CELULAR = d.CELULAR,
+                                      CORREO = d.CORREO,
+                                      DIRECCION = d.DIRECCION,
+                                      TIPO_PERSONA = d.TIPO_PERSONA                                      
+                                  };
                 grdDatosP.DataSource = lstPersonas.ToList();
             }
         }
@@ -85,8 +94,16 @@ namespace VideotiendaWFApp.Views
             {
                 //Consultar todas las personas
                 var lstPersonas = from d in db.PERSONAS
-                                  select d;
-
+                                  select new
+                                  {
+                                      NRO_DOC = d.NRO_DOC,
+                                      TIPO_DOC = d.TIPO_DOC,
+                                      NOMBRES = d.NOMBRES,
+                                      CELULAR = d.CELULAR,
+                                      CORREO = d.CORREO,
+                                      DIRECCION = d.DIRECCION,
+                                      TIPO_PERSONA = d.TIPO_PERSONA
+                                  };
                 //Aplicar filtros dependiendo de lo que el usuario haya ingresado en la pantalla
                 if (!string.IsNullOrEmpty(this.txtnombre.Text))
                 {
@@ -112,7 +129,7 @@ namespace VideotiendaWFApp.Views
             this.txtDireccion.Text = "";
             this.txtCorreo.Text = "";
             this.txtCelular.Text = "";
-            this.txtContrasena.Text = "";
+            
 
             refrescarTabla();
         }
@@ -173,6 +190,17 @@ namespace VideotiendaWFApp.Views
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnNuevo_Click_1(object sender, EventArgs e)
+        {
+            FrmGestionarPersonas frmGestionarPersonas = new FrmGestionarPersonas(null);
+            frmGestionarPersonas.Show();
+        }
+
+        private void btnBuscar_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
